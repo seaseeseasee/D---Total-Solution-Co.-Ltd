@@ -1502,92 +1502,96 @@
     <section id="contact" class="contact section">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Contact Us</p>
-      </div><!-- End Section Title -->
+<div class="container section-title" data-aos="fade-up">
+  <h2>Contact</h2>
+  <p>Contact Us</p>
+</div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6">
-
-             
-        <!-- Info Box -->
-        <div class="info-box mb-4">
-          <div class="d-flex flex-column gap-3">
-            <div class="d-flex align-items-start">
-              <i class="bi bi-geo-alt fs-4 text-success me-3"></i>
-              <div>
-                <h6 class="mb-1 fw-bold">Address</h6>
-                <p class="mb-0">D Total Solution Co.,Ltd.
-119/87 Moo. 4, Rattanathibeth Rd.,
-Tambon Saima, Muang, Nonthaburi,
-Thailand, 11000</p>
-              </div>
+<div class="container contact-section" data-aos="fade-up" data-aos-delay="100">
+  <div class="row align-items-start gy-4">
+    
+    <!-- ซ้าย: Info + Map -->
+    <div class="col-lg-6 map-box">
+      <div class="info-box mb-4">
+        <div class="d-flex flex-column gap-3">
+          <div class="d-flex align-items-start">
+            <i class="bi bi-geo-alt fs-4 text-success me-3"></i>
+            <div>
+              <h6 class="mb-1 fw-bold">Address</h6>
+              <p class="mb-0">D Total Solution Co.,Ltd. 119/87 Moo. 4, Rattanathibeth Rd., Tambon Saima, Muang, Nonthaburi, Thailand, 11000</p>
             </div>
-            <div class="d-flex align-items-start">
-              <i class="bi bi-telephone fs-4 text-success me-3"></i>
-              <div>
-                <h6 class="mb-1 fw-bold">Call Us</h6>
-                <p class="mb-0">(66)0-2985-4270</p>
-                    <p>(66)0-2149-3979-80 #11,12,14,15</p>
-              </div>
+          </div>
+          <div class="d-flex align-items-start">
+            <i class="bi bi-telephone fs-4 text-success me-3"></i>
+            <div>
+              <h6 class="mb-1 fw-bold">Call Us</h6>
+              <p class="mb-0">(66)0-2985-4270</p>
+              <p>(66)0-2149-3979-80 #11,12,14,15</p>
             </div>
-            <div class="d-flex align-items-start">
-              <i class="bi bi-envelope fs-4 text-success me-3"></i>
-              <div>
-                <h6 class="mb-1 fw-bold">Email Us</h6>
-                <p class="mb-0">phornsak@dtotalsolution.com</p>
-              </div>
+          </div>
+          <div class="d-flex align-items-start">
+            <i class="bi bi-envelope fs-4 text-success me-3"></i>
+            <div>
+              <h6 class="mb-1 fw-bold">Email Us</h6>
+              <p class="mb-0">phornsak@dtotalsolution.com</p>
             </div>
           </div>
         </div>
-
-        <!-- Google Map -->
-        <div style="width: 100%; height: 300px;" class="rounded overflow-hidden">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3873.554807657991!2d100.473172!3d13.865741!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ad030c8793d%3A0x9c2742a53c327cf9!2sD%20Total%20Solution%20Co.%2C%20Ltd.!5e0!3m2!1sth!2sth!4v1746524498062!5m2!1sth!2st"
-            width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy">
-          </iframe>
-        </div>
       </div>
 
+      <div class="rounded overflow-hidden" style="width: 100%; height: 300px;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3873.554807657991!2d100.473172!3d13.865741!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ad030c8793d%3A0x9c2742a53c327cf9!2sD%20Total%20Solution%20Co.%2C%20Ltd.!5e0!3m2!1sth!2sth!4v1746524498062!5m2!1sth!2st"
+          width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- ขวา: ฟอร์ม -->
+    <div class="col-lg-6">
+      <div class="contact-card bg-white p-4 rounded shadow-sm">
+        <form id="contact-form">
+          <input name="name" class="form-control mb-3" type="text" placeholder="Your Name" required>
+          <input name="email" class="form-control mb-3" type="email" placeholder="Your Email" required>
+          <textarea name="message" class="form-control mb-3" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn btn-success w-100">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+
       <!-- RIGHT: Contact Form -->
-      <form id="contact-form">
-           
-    <input type="text" name="name" placeholder="Your Name" required><br><br>
-    <input type="email" name="email" placeholder="Your Email" required><br><br>
-    <textarea name="message" placeholder="Your Message" required></textarea><br><br>
-    <button type="submit">Send</button>
-  </form>
+      
 
-  <script>
-    document.getElementById('contact-form').addEventListener('submit', async function(e) {
-      e.preventDefault();
+<script>
+document.getElementById('contact-form').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  const form = e.target;
+  const formData = new FormData(form);
 
-      const form = e.target;
-      const data = {
-        name: form.name.value,
-        email: form.email.value,
-        message: form.message.value
-      };
+  // ✅ เพิ่ม timestamp เป็นค่า ISO string เช่น 2025-05-13T19:00:00Z
+  const timestamp = new Date().toISOString();
+  formData.append('timestamp', timestamp);
 
-      const res = await fetch("https://hooks.zapier.com/hooks/catch/22900621/2nnuzdz/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      });
+  const res = await fetch("https://hooks.zapier.com/hooks/catch/22900621/2nnuzdz/", {
+    method: "POST",
+    body: formData
+  });
 
-      if (res.ok) {
-        alert("✅ ข้อมูลถูกส่งเรียบร้อยแล้ว!");
-        form.reset();
-      } else {
-        alert("❌ ส่งข้อมูลไม่สำเร็จ");
-      }
-    });
-  </script>
+  if (res.ok) {
+    alert("✅ ข้อมูลถูกส่งเรียบร้อยแล้ว!");
+    form.reset();
+  } else {
+    alert("❌ ส่งข้อมูลไม่สำเร็จ");
+  }
+});
+</script>
+
+
+
+
        </form>
 
    
@@ -1653,7 +1657,7 @@ Thailand, 11000</p>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -1674,4 +1678,46 @@ Thailand, 11000</p>
 </body>
 
 </html>
-<style></style>
+  <style>
+  .contact-section {
+    margin-top: 2rem;
+  }
+
+  .contact-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .contact-card input,
+  .contact-card textarea {
+    width: 100%;
+    padding: 0.9rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+
+  .contact-card button {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: #198754;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+
+  .contact-card button:hover {
+    background-color: #157347;
+  }
+    @media (max-width: 768px) {
+    .map-box,
+    .form-box {
+      margin-bottom: 2rem;
+    }
+  }
+</style>
