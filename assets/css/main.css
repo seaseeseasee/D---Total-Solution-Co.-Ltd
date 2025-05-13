@@ -1609,25 +1609,25 @@ section,
   transition: 0.3s;
 }
 
-.team .team-member .member-img {
+.team .team-member .member-img img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  padding: 10px;
+  z-index: 2;
   position: relative;
-  overflow: hidden;
 }
 
+
 .team .team-member .member-img:after {
-  position: absolute;
-  content: "";
-  left: -1px;
-  right: -1px;
   bottom: -1px;
   height: 100%;
-  background-color: var(--surface-color);
-  -webkit-mask: url("../img/team-shape.svg") no-repeat center bottom;
-  mask: url("../img/team-shape.svg") no-repeat center bottom;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  z-index: 1;
+  background-color: var(--surface-color, #fff); /* fallback */
+  -webkit-mask-position: center bottom;
+  mask-position: center bottom;
+  pointer-events: none;
 }
+
 
 .team .team-member .social {
   position: absolute;
