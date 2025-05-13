@@ -1695,34 +1695,38 @@ section,
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
+.clients,
+.clients .container,
+.clients .swiper,
+.clients .swiper-wrapper,
+.clients .swiper-slide {
+  overflow: visible !important;
+  position: relative;
+  z-index: 1;
+}
+
+.clients .swiper-slide {
+  padding: 5px;
+}
+
 .clients .swiper-slide img {
-  transition: 0.3s;
-  opacity: 0.5;
+  height: 250px;
+  object-fit: contain;
+  transition: 0.3s ease;
+  opacity: 0.9;
+  filter: brightness(1);
+  transform-origin: center center;
+  position: relative;
+  z-index: 2;
 }
 
 .clients .swiper-slide img:hover {
+  transform: scale(2);
   opacity: 1;
+  filter: brightness(1.1);
+  z-index: 99;
 }
 
-.clients .swiper-wrapper {
-  height: auto;
-}
-
-.clients .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.clients .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  opacity: 1;
-  background-color: color-mix(in srgb, var(--default-color), transparent 80%);
-}
-
-.clients .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-}
 
 /*--------------------------------------------------------------
 # Recent Posts Section
