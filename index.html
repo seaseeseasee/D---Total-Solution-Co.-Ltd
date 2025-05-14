@@ -43,26 +43,103 @@
 
 <body class="index-page">
 
- <header id="header" class="header d-flex align-items-center fixed-top">
-  <div class="container-fluid container-xl position-relative d-flex align-items-center">
+<!-- Header (FlexStart Compatible) -->
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-xl d-flex align-items-center justify-content-between">
 
-    <a href="index.html" class="logo d-flex align-items-center me-auto" style="text-decoration: none;">
-      <img src="/assets/img/logodtotal.png" alt="Logodtotal" style="max-height: 100px; width: auto;" />
+    <!-- ✅ Logo -->
+    <a href="index.html" class="logo d-flex align-items-center" style="text-decoration: none;">
+      <img src="assets/img/logodtotal.png" alt="Logodtotal" style="max-height: 80px; width: auto;" />
     </a>
 
+    <!-- ✅ Nav (desktop + responsive) -->
     <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active" style="text-decoration: none;">Home</a></li>
-        <li><a href="#about" style="text-decoration: none;">About</a></li>
-        <li><a href="#services" style="text-decoration: none;">Services</a></li>
-        <li><a href="#portfolio" style="text-decoration: none;">Portfolio</a></li>
-        <li><a href="#team" style="text-decoration: none;">Partner</a></li>
-        <li><a href="#contact" style="text-decoration: none;">Contact</a></li>
+      <ul class="d-none d-xl-flex">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#team">Partner</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
+    <!-- ✅ Mobile Menu Toggle -->
+    <i class="mobile-nav-toggle mobile-nav-show bi bi-list d-xl-none"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide bi bi-x d-none"></i>
+
   </div>
+
+  <!-- ✅ Mobile Nav (แสดงเมื่อ toggle) -->
+  <nav id="mobile-nav" class="mobile-nav d-xl-none d-none">
+    <ul>
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#team">Partner</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <style>
+    .navmenu a,
+    .mobile-nav a {
+      text-decoration: none !important;
+      padding: 10px;
+      display: block;
+    }
+
+    .mobile-nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      padding: 1rem;
+      z-index: 9999;
+    }
+
+    .mobile-nav ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .mobile-nav ul li {
+      border-bottom: 1px solid #eee;
+    }
+  </style>
+
+  <script>
+    // Mobile nav toggle behavior
+    document.addEventListener('DOMContentLoaded', () => {
+      const showBtn = document.querySelector('.mobile-nav-show');
+      const hideBtn = document.querySelector('.mobile-nav-hide');
+      const mobileNav = document.getElementById('mobile-nav');
+
+      const toggleMenu = (show) => {
+        if (show) {
+          mobileNav.classList.remove('d-none');
+          showBtn.classList.add('d-none');
+          hideBtn.classList.remove('d-none');
+        } else {
+          mobileNav.classList.add('d-none');
+          showBtn.classList.remove('d-none');
+          hideBtn.classList.add('d-none');
+        }
+      };
+
+      showBtn.addEventListener('click', () => toggleMenu(true));
+      hideBtn.addEventListener('click', () => toggleMenu(false));
+    });
+  </script>
 </header>
+
+
+
+
+
 
 
   <main class="main">
@@ -1169,7 +1246,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
 
   <footer class="bg-light py-5 text-dark">
             <div class="container px-4 px-lg-5">
-              <h5 class="text-center mb-4 fw-bold">Contact Us</h5>
+        
               <div class="row">
                 <div class="col-md-4 mb-3">
                   <p><strong>Phone:</strong><br>
@@ -1315,7 +1392,40 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   justify-content: space-between;
   height: 100%; /* ✅ ทำให้เต็ม slide */
 }
+.team-member .member-img {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่างภาพ */
+}
 
+.team-member .member-img img {
+  max-height: 120px;  /* ✅ ปรับความสูงให้พอดี */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .team .swiper-slide {
+    min-width: 100%;
+  }
+}
+
+.team-member .member-img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.team-member .member-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
 
 </style>

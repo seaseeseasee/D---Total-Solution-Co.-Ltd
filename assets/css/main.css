@@ -65,6 +65,7 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+
 }
 
 a {
@@ -97,27 +98,26 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--background-color, #fff); /* fallback */
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
+
+.header .logo img {
+  max-height: 60px; /* เดิมคือ 36px, เล็กเกินไป */
+  margin-right: 8px;
+}
+
 
 .header .logo {
   line-height: 1;
 }
 
-.header .logo img {
-  max-height: 36px;
-  margin-right: 8px;
-}
-
-.header .logo h1 {
-  font-size: 30px;
-  margin: 0;
-  font-weight: 700;
-  color: var(--heading-color);
-}
 
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
@@ -160,14 +160,14 @@ h6 {
 /* Index Page Header
 ------------------------------*/
 .index-page .header {
-  --background-color: rgba(255, 255, 255, 0);
+  --background-color: #ffffff00; /* ใช้ค่าที่ชัดเจนกว่า rgba */
 }
 
-/* Index Page Header on Scroll
-------------------------------*/
 .index-page.scrolled .header {
   --background-color: #ffffff;
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -224,6 +224,7 @@ h6 {
 
 
 /* Navmenu - Mobile */
+/* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
@@ -243,7 +244,10 @@ h6 {
     display: none;
     list-style: none;
     position: absolute;
-    inset: 60px 20px 20px 20px;
+    top: 60px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
     padding: 10px 0;
     margin: 0;
     border-radius: 6px;
@@ -287,14 +291,12 @@ h6 {
   .navmenu a:focus i:hover {
     background-color: var(--accent-color);
     color: var(--contrast-color);
-    
   }
 
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-dropdown-hover-color);
-   
   }
 
   .navmenu .active i,
@@ -302,35 +304,13 @@ h6 {
     background-color: var(--accent-color);
     color: var(--contrast-color);
     transform: rotate(180deg);
-    
   }
 
-  .navmenu .dropdown ul {
-    position: static;
-    display: none;
-    z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    box-shadow: none;
-    transition: all 0.5s ease-in-out;
-  }
-
-  .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
-  }
-
-  .navmenu .dropdown>.dropdown-active {
-    display: block;
-    background-color: rgba(33, 37, 41, 0.03);
-  }
-
-  .mobile-nav-active {
+  body.mobile-nav-active {
     overflow: hidden;
   }
 
-  .mobile-nav-active .mobile-nav-toggle {
+  body.mobile-nav-active .mobile-nav-toggle {
     color: #fff;
     position: absolute;
     font-size: 32px;
@@ -340,7 +320,7 @@ h6 {
     z-index: 9999;
   }
 
-  .mobile-nav-active .navmenu {
+  body.mobile-nav-active .navmenu {
     position: fixed;
     overflow: hidden;
     inset: 0;
@@ -348,95 +328,48 @@ h6 {
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu>ul {
-    display: block;
+  body.mobile-nav-active .navmenu > ul {
+    display: block !important;
   }
+  /* เปิดเมนู */
+body.mobile-nav-active .navmenu ul {
+  display: block !important;
 }
 
-/* Listing Dropdown - Desktop */
+/* toggle แฮมเบอร์เกอร์/ปุ่มปิด */
+.mobile-nav-show {
+  display: inline-block;
+}
+
+.mobile-nav-hide {
+  display: none;
+}
+
+body.mobile-nav-active .mobile-nav-show {
+  display: none;
+}
+
+body.mobile-nav-active .mobile-nav-hide {
+  display: inline-block;
+}
+
+
+}
+
+
+/* Navmenu - Desktop */
 @media (min-width: 1200px) {
-  .navmenu .listing-dropdown {
-    position: static;
+  .mobile-nav-toggle {
+    display: none;
   }
 
-  .navmenu .listing-dropdown ul {
-    margin: 0;
-    padding: 10px;
-    background: var(--nav-dropdown-background-color);
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 130%;
-    left: 0;
-    right: 0;
-    visibility: hidden;
-    opacity: 0;
-    display: flex;
-    transition: 0.3s;
-    border-radius: 4px;
-    z-index: 99;
-  }
-
-  .navmenu .listing-dropdown ul li {
-    flex: 1;
-  }
-
-  .navmenu .listing-dropdown ul li a,
-  .navmenu .listing-dropdown ul li:hover>a {
-    padding: 10px 20px;
-    font-size: 15px;
-    color: var(--nav-dropdown-color);
-    background-color: var(--nav-dropdown-background-color);
-  }
-
-  .navmenu .listing-dropdown ul li a:hover,
-  .navmenu .listing-dropdown ul li .active,
-  .navmenu .listing-dropdown ul li .active:hover {
-    color: var(--nav-dropdown-hover-color);
-    background-color: var(--nav-dropdown-background-color);
-  }
-
-  .navmenu .listing-dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
+  .navmenu {
+    display: block !important;
   }
 }
-
-  
-  @media (min-width: 1200px) {
-    .mobile-nav-toggle {
-      display: none;
-    }
-
-    #navmenu {
-      display: block !important;
-    }
-  }
-
 
 /* Listing Dropdown - Mobile */
-@media (max-width: 1199px) {
-  .navmenu .listing-dropdown ul {
-    position: static;
-    display: none;
-    z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    box-shadow: none;
-    transition: all 0.5s ease-in-out;
-  }
 
-  .navmenu .listing-dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
-  }
-
-  .navmenu .listing-dropdown>.dropdown-active {
-    display: block;
-    background-color: rgba(33, 37, 41, 0.03);
-  }
-}
 
 /*--------------------------------------------------------------
 # Global Footer
@@ -733,14 +666,17 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh; /* ใช้ height แทน min-height */
   position: relative;
-  padding: 80px 0 60px 0;
+  padding: 0 0 60px 0; /* เผื่อ footer ด้านล่าง */
   display: flex;
   align-items: center;
-  background: url(../img/hero-bg.png) top center no-repeat;
+  justify-content: center; /* ถ้ามี text/logo ตรงกลาง */
+  background: url('../img/hero-bg.png') center center no-repeat;
   background-size: cover;
+  background-attachment: scroll; /* หรือ fixed ถ้าต้องการ parallax */
 }
+
 
 .hero h1 {
   margin: 0;
@@ -756,60 +692,7 @@ section,
   font-weight: 400;
 }
 
-.hero .btn-get-started {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  font-family: var(--heading-font);
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 40px;
-  border-radius: 4px;
-  transition: 0.5s;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
-}
 
-.hero .btn-get-started i {
-  margin-left: 5px;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.hero .btn-get-started:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
-}
-
-.hero .btn-get-started:hover i {
-  transform: translateX(5px);
-}
-
-.hero .btn-watch-video {
-  font-size: 16px;
-  transition: 0.5s;
-  color: var(--default-color);
-  font-weight: 600;
-}
-
-.hero .btn-watch-video i {
-  color: var(--accent-color);
-  font-size: 32px;
-  transition: 0.3s;
-  line-height: 0;
-  margin-right: 8px;
-}
-
-.hero .btn-watch-video:hover {
-  color: var(--accent-color);
-}
-
-.hero .btn-watch-video:hover i {
-  color: color-mix(in srgb, var(--accent-color), transparent 15%);
-}
 
 .hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
@@ -2669,5 +2552,5 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
-}
+} 
 }
