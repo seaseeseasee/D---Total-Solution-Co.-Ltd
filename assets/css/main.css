@@ -65,6 +65,7 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+  
 }
 
 a {
@@ -1532,6 +1533,7 @@ section,
   margin: 0 1px;
 }
 
+/* รูปภาพ Testimonials */
 .testimonials .testimonial-item .testimonial-img {
   width: 90px;
   border-radius: 50%;
@@ -1539,27 +1541,32 @@ section,
   margin: 0 auto;
 }
 
+/* ชื่อผู้ให้คำแนะนำ */
 .testimonials .testimonial-item h3 {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 0;
 }
 
+/* ตำแหน่ง */
 .testimonials .testimonial-item h4 {
   font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   margin: 0;
 }
 
+/* คำแนะนำ */
 .testimonials .testimonial-item p {
   font-style: italic;
   margin: 0 auto 15px auto;
 }
 
+/* ขนาด Swiper */
 .testimonials .swiper-wrapper {
   height: auto;
 }
 
+/* จุดสไลด์ (pagination) */
 .testimonials .swiper-pagination {
   margin-top: 20px;
   position: relative;
@@ -1576,15 +1583,44 @@ section,
   background-color: var(--accent-color);
 }
 
+/* เอฟเฟกต์จางของสไลด์อื่น */
 .testimonials .swiper-slide {
-  opacity: 0.3;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  overflow: visible !important; /* ป้องกันตัดรูป */
 }
 
-@media (max-width: 1199px) {
-  .testimonials .swiper-slide-active {
-    opacity: 1;
-  }
+/* slide ที่ active หรือใกล้เคียง ให้ชัด */
+.testimonials .swiper-slide-active,
+.testimonials .swiper-slide-next,
+.testimonials .swiper-slide-prev {
+  opacity: 1;
+}
 
+/* Swiper Container ให้ไม่ตัด */
+.testimonials .swiper,
+.testimonials .swiper-wrapper {
+  overflow: visible !important;
+}
+
+/* เอฟเฟกต์ Hover ขยายรูป */
+.testimonials .swiper-slide img {
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ขยายเฉพาะ Desktop */
+@media (min-width: 768px) {
+  .testimonials .swiper-slide:hover img {
+    transform: scale(1.1);
+    z-index: 2;
+    position: relative;
+  }
+}
+
+/* Responsive Mobile */
+@media (max-width: 1199px) {
   .testimonials .swiper-pagination {
     margin-top: 0;
   }
@@ -1593,14 +1629,6 @@ section,
     margin: 40px 20px;
   }
 }
-
-@media (min-width: 1200px) {
-  .testimonials .swiper-slide-next {
-    opacity: 1;
-    transform: scale(1.12);
-  }
-}
-
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/
@@ -1701,21 +1729,21 @@ section,
 .clients,
 .clients .container,
 .clients .swiper,
-.clients .swiper-wrapper,
-.clients .swiper-slide {
-  overflow: visible !important;
-  position: relative;
-  z-index: 1;
+.clients .swiper-wrapper {
+  overflow: hidden; /* 🔒 ป้องกันภาพล้น */
 }
 
 .clients .swiper-slide {
   padding: 5px;
+  overflow: hidden; /* ✅ ซ่อนภาพที่ล้นจากการ hover */
+  position: relative;
+  text-align: center;
 }
 
 .clients .swiper-slide img {
-  height: 250px;
+  height: 150px; /* 🔧 ปรับขนาดให้เหมาะกับ layout โดยรวม */
   object-fit: contain;
-  transition: 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
   opacity: 0.9;
   filter: brightness(1);
   transform-origin: center center;
@@ -1724,10 +1752,10 @@ section,
 }
 
 .clients .swiper-slide img:hover {
-  transform: scale(2);
+  transform: scale(1.5); /* 🔧 ลดจาก 2 เหลือ 1.5 เพื่อลดการล้น */
   opacity: 1;
   filter: brightness(1.1);
-  z-index: 99;
+  z-index: 3;
 }
 
 
