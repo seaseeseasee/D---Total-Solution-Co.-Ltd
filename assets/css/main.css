@@ -666,50 +666,89 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  height: 100vh; /* ใช้ height แทน min-height */
+  height: 100vh;
   position: relative;
-  padding: 0 0 60px 0; /* เผื่อ footer ด้านล่าง */
+  padding: 0 0 60px 0;
   display: flex;
   align-items: center;
-  justify-content: center; /* ถ้ามี text/logo ตรงกลาง */
+  justify-content: center;
   background: url('../img/hero-bg.png') center center no-repeat;
   background-size: cover;
-  background-attachment: scroll; /* หรือ fixed ถ้าต้องการ parallax */
+  background-attachment: scroll;
+  overflow: hidden; /* ป้องกันลูกเล่น animation ล้นจอ */
+  text-align: center;
 }
 
-
+/* ข้อความหัวเรื่อง */
 .hero h1 {
   margin: 0;
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
+  color: var(--heading-color); /* ใช้ตัวแปรมาตรฐาน */
 }
 
+/* ข้อความรอง */
 .hero p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin: 5px 0 30px 0;
   font-size: 20px;
   font-weight: 400;
+  color: rgba(68, 68, 68, 0.7); /* 🔄 แทน color-mix เพื่อรองรับทุก browser */
 }
 
-
-
+/* ภาพมี animation */
 .hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
-@media (max-width: 640px) {
+/* animation */
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive: มือถือ */
+/* Responsive: มือถือ */
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 20px;
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+  }
+
   .hero h1 {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 32px;
+    line-height: 42px;
   }
 
   .hero p {
     font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+
+  .hero-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .hero-img img,
+  .hero .animated {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 }
+
+
+
 
 @keyframes up-down {
   0% {
