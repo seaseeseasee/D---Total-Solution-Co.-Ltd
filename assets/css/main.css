@@ -1399,6 +1399,7 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+/* Portfolio Filters */
 .portfolio .portfolio-filters {
   padding: 0;
   margin: 0 auto 20px auto;
@@ -1412,23 +1413,14 @@ section,
   padding: 0;
   font-size: 18px;
   font-weight: 500;
-  margin: 0 10px;
+  margin: 0 10px 5px;
   line-height: 1;
-  margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
 
 .portfolio .portfolio-filters li:hover,
 .portfolio .portfolio-filters li.filter-active {
   color: var(--accent-color);
-}
-
-.portfolio .portfolio-filters li:first-child {
-  margin-left: 0;
-}
-
-.portfolio .portfolio-filters li:last-child {
-  margin-right: 0;
 }
 
 @media (max-width: 575px) {
@@ -1438,74 +1430,35 @@ section,
   }
 }
 
+/* Portfolio Card */
 .portfolio .portfolio-content {
-   height: 100%;
-  min-height: 400px; /* ปรับค่าตามความเหมาะสม */
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 250px; /* ✅ ให้เท่ากับภาพ */
+  background: #fff;
   border: 1px solid #eee;
   border-radius: 8px;
-  background: #fff;
+  overflow: hidden;
 }
 
 .portfolio .portfolio-content img {
-  transition: 0.3s;
-  height: 250px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  transition: 0.3s;
 }
 
-.portfolio .portfolio-content .portfolio-info {
-  opacity: 0;
+/* Overlay Info */
+.portfolio .portfolio-info {
   position: absolute;
   inset: 0;
-  z-index: 3;
-  transition: all ease-in-out 0.3s;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
   background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
   padding: 15px;
-}
-
-.portfolio .portfolio-content .portfolio-info h4 {
-  font-size: 14px;
-  padding: 5px 10px;
-  font-weight: 400;
-  color: #ffffff;
-  display: inline-block;
-  background-color: var(--accent-color);
-}
-
-.portfolio .portfolio-content .portfolio-info p {
-  position: absolute;
-  bottom: 10px;
-  text-align: center;
-  display: inline-block;
-  left: 0;
-  right: 0;
-  font-size: 16px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.portfolio .portfolio-content .portfolio-info .preview-link,
-.portfolio .portfolio-content .portfolio-info .details-link {
-  position: absolute;
-  left: calc(50% - 40px);
-  font-size: 26px;
-  top: calc(50% - 14px);
-  color: #fff;
-  transition: 0.3s;
-  line-height: 1.2;
-}
-
-.portfolio .portfolio-content .portfolio-info .preview-link:hover,
-.portfolio .portfolio-content .portfolio-info .details-link:hover {
-  color: var(--accent-color);
-}
-
-.portfolio .portfolio-content .portfolio-info .details-link {
-  left: 50%;
-  font-size: 34px;
-  line-height: 0;
 }
 
 .portfolio .portfolio-content:hover .portfolio-info {
@@ -1515,6 +1468,75 @@ section,
 .portfolio .portfolio-content:hover img {
   transform: scale(1.1);
 }
+
+/* Info Text */
+.portfolio .portfolio-info h4 {
+  font-size: 14px;
+  padding: 5px 10px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: var(--accent-color);
+  display: inline-block;
+}
+
+.portfolio .portfolio-info p {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Lightbox Buttons */
+.portfolio .portfolio-info .preview-link,
+.portfolio .portfolio-info .details-link {
+  position: absolute;
+  left: calc(50% - 40px);
+  top: calc(50% - 14px);
+  font-size: 26px;
+  color: #fff;
+  line-height: 1.2;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-info .details-link {
+  left: 50%;
+  font-size: 34px;
+  line-height: 0;
+}
+
+.portfolio .portfolio-info .preview-link:hover,
+.portfolio .portfolio-info .details-link:hover {
+  color: var(--accent-color);
+}
+/* กล่องภาพทั้งหมด */
+.portfolio .portfolio-item {
+  height: 250px; /* หรือ 300px ตามต้องการ */
+  overflow: hidden;
+}
+
+/* กล่องเนื้อหาภายใน */
+.portfolio .portfolio-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+/* รูปภาพ */
+.portfolio .portfolio-content img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
 
 /*--------------------------------------------------------------
 # Testimonials Section
