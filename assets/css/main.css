@@ -1439,12 +1439,20 @@ section,
 }
 
 .portfolio .portfolio-content {
-  position: relative;
-  overflow: hidden;
+   height: 100%;
+  min-height: 400px; /* ปรับค่าตามความเหมาะสม */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fff;
 }
 
 .portfolio .portfolio-content img {
   transition: 0.3s;
+  height: 250px;
+  object-fit: cover;
 }
 
 .portfolio .portfolio-content .portfolio-info {
