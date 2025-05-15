@@ -1,0 +1,37 @@
+[33m7675c6c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/fainal[m[33m, [m[1;32mfainal[m[33m)[m HEAD@{0}: reset: moving to fainal
+[33mdf1cb69[m HEAD@{1}: checkout: moving from 45214c58c65a1fbc785d2c014dbead647a36fa06 to main
+[33m45214c5[m HEAD@{2}: reset: moving to 45214c5
+[33m29c5ad3[m HEAD@{3}: checkout: moving from 202d2e7b76d15f6a342fa32c323281cf2e598ce0 to 29c5ad35554fc3c6dd9465a0502c61b9adf7785a
+[33m202d2e7[m HEAD@{4}: commit (merge): update logo image
+[33m45214c5[m HEAD@{5}: checkout: moving from 7675c6c0d5b1469452854c1ad9187bbf812e5510 to 45214c58c65a1fbc785d2c014dbead647a36fa06
+[33m7675c6c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/fainal[m[33m, [m[1;32mfainal[m[33m)[m HEAD@{6}: merge fainal: Fast-forward
+[33m29c5ad3[m HEAD@{7}: checkout: moving from 7675c6c0d5b1469452854c1ad9187bbf812e5510 to 29c5ad35554fc3c6dd9465a0502c61b9adf7785a
+[33m7675c6c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/fainal[m[33m, [m[1;32mfainal[m[33m)[m HEAD@{8}: merge fainal: Fast-forward
+[33m45214c5[m HEAD@{9}: checkout: moving from 7675c6c0d5b1469452854c1ad9187bbf812e5510 to 45214c58c65a1fbc785d2c014dbead647a36fa06
+[33m7675c6c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/fainal[m[33m, [m[1;32mfainal[m[33m)[m HEAD@{10}: merge fainal: Fast-forward
+[33m45214c5[m HEAD@{11}: checkout: moving from fainal to 45214c58c65a1fbc785d2c014dbead647a36fa06
+[33m7675c6c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/fainal[m[33m, [m[1;32mfainal[m[33m)[m HEAD@{12}: checkout: moving from 7675c6c0d5b1469452854c1ad9187bbf812e5510 to fainal
+[33m7675c6c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/fainal[m[33m, [m[1;32mfainal[m[33m)[m HEAD@{13}: commit (merge): Merge branch 'main' into HEAD
+[33m45214c5[m HEAD@{14}: commit: fainal
+[33m40a0f01[m HEAD@{15}: commit: 888888888888888888888888888888888654
+[33m81596c2[m HEAD@{16}: checkout: moving from main to 81596c2c871d78bdc8d1dc0e6194b5552cdacb0f
+[33mdf1cb69[m HEAD@{17}: commit: 666666666666666
+[33m7f063a2[m HEAD@{18}: commit: 88888888888
+[33m786544e[m HEAD@{19}: commit: 45
+[33m81596c2[m HEAD@{20}: commit: 11
+[33m500ea8d[m HEAD@{21}: commit: 5478962162
+[33m4466c7c[m HEAD@{22}: commit: imggfull
+[33md701ce1[m HEAD@{23}: commit: 999999999999999
+[33m650324e[m HEAD@{24}: commit: *946496466316496
+[33m4f1ca5b[m HEAD@{25}: commit: 33333333333333
+[33m4147e7a[m HEAD@{26}: commit: 22222
+[33m93c6bbf[m HEAD@{27}: commit: 255555555
+[33m02ada37[m HEAD@{28}: commit: partner
+[33m4c32493[m HEAD@{29}: commit: 1745222
+[33m4c5a742[m HEAD@{30}: commit: seassss
+[33m5a141f7[m HEAD@{31}: commit: finaly
+[33m0f66b61[m HEAD@{32}: commit: 2
+[33m692bdfa[m HEAD@{33}: commit: commitone
+[33m29c5ad3[m HEAD@{34}: pull origin main --allow-unrelated-histories: Merge made by the 'ort' strategy.
+[33m45385bb[m HEAD@{35}: Branch: renamed refs/heads/master to refs/heads/main
+[33m45385bb[m HEAD@{37}: commit (initial): Initial commit

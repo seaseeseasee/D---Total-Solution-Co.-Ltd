@@ -284,7 +284,7 @@ h6 {
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
-    font-size: 28px;
+    font-size: 35px;
     line-height: 0;
     margin-right: 10px;
     cursor: pointer;
@@ -316,7 +316,7 @@ h6 {
     color: var(--nav-dropdown-color);
     padding: 10px 20px;
     font-family: var(--nav-font);
-    font-size: 17px;
+    font-size: 35px;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -1406,6 +1406,7 @@ section,
   text-align: center;
 }
 
+
 .portfolio .portfolio-filters li {
   cursor: pointer;
   display: inline-block;
@@ -1445,6 +1446,9 @@ section,
 
 .portfolio .portfolio-content img {
   transition: 0.3s;
+   width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
 .portfolio .portfolio-content .portfolio-info {
@@ -1506,6 +1510,12 @@ section,
 
 .portfolio .portfolio-content:hover img {
   transform: scale(1.1);
+}
+
+/* ✅ Fix hidden items */
+.isotope-container {
+  position: relative;
+  min-height: 800px; /* ปรับตามความเหมาะสม เช่น 1000px หากมี 6 กล่อง */
 }
 
 /*--------------------------------------------------------------
