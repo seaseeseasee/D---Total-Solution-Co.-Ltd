@@ -25,29 +25,40 @@
   /**
    * Mobile nav toggle
    */
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+ const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
 
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
+  function mobileNavToggle() {
+    document.body.classList.toggle('mobile-nav-active');
     mobileNavToggleBtn.classList.toggle('bi-list');
     mobileNavToggleBtn.classList.toggle('bi-x');
   }
+
+  // เปิด/ปิดเมนูเมื่อคลิกไอคอน
   if (mobileNavToggleBtn) {
-    mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+    mobileNavToggleBtn.addEventListener('click', mobileNavToggle);
   }
 
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
+  // ปิดเมนูเมื่อคลิกลิงก์เมนู
+  document.querySelectorAll('#navmenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (document.body.classList.contains('mobile-nav-active')) {
+        mobileNavToggle();
       }
     });
-
   });
 
+  // กรณีมี dropdown ภายใต้เมนู (ถ้าไม่มี dropdown ข้ามส่วนนี้ได้เลย)
+  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(dropToggle => {
+    dropToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      this.classList.toggle('active');
+      const dropdownMenu = this.nextElementSibling;
+      if (dropdownMenu) {
+        dropdownMenu.classList.toggle('dropdown-active');
+      }
+      e.stopImmediatePropagation();
+    });
+  });
   /**
    * Toggle mobile nav dropdowns
    */
