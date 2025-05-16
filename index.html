@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>D - Total Solution Co., Ltd.</title>
+  <title>D Total Solution Co., Ltd.</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -29,6 +29,8 @@
 
   <!-- ✅ Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
   <!-- ✅ Fancybox CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 
@@ -601,7 +603,7 @@
                       data-src="#lightbox-app4" 
                       data-type="inline" 
                       class="btn btn-primary position-absolute top-50 start-50 translate-middle">
-                      <i class="bi bi-zoom-in"></i> ดูภาพ
+                      <i class="bi bi-zoom-in"></i> 
                     </a>
                 </div>
               </div>
@@ -738,7 +740,7 @@
                       data-src="#lightbox-app5" 
                       data-type="inline" 
                       class="btn btn-primary position-absolute top-50 start-50 translate-middle">
-                      <i class="bi bi-zoom-in"></i> ดูภาพ
+                      <i class="bi bi-zoom-in"></i>
                     </a>
                 </div>
               </div>
@@ -803,157 +805,325 @@
       <div class="swiper-wrapper">
 
         <!-- ✅ 1. POS Corp -->
-        <div class="swiper-slide">
-          <div class="team-member">
-            <a href="https://www.poscorp.sg/">
-              <div class="member-img">
-                <img src="assets/img/team/team-1.jpg" alt="POS Corp">
-              </div>
-            </a>
-            <div class="member-info">
-              <h4>POS Corp — Simply Smart</h4>
-              <span>Chief Executive Officer</span>
-              <p>SMARTER, FRIENDLIER, SIMPLIFIED POINT OF SERVICES SOLUTIONS</p>
-            </div>
-          </div>
+                   <div class="swiper-slide">
+  <a href="https://www.poscorp.sg/" target="_blank" style="text-decoration: none;">
+    <div class="team-member" style="border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.1); text-align: center;">
+      
+      <!-- ✅ ครอบภาพด้วย container ขนาดเท่ากัน -->
+      <div class="member-img-wrapper" style="position: relative; background-color: #f5f5f5; height: 150px;">
+        <div class="image-container" style="height: 100%; display: flex; align-items: center; justify-content: center;">
+          <img src="assets/img/team/team-1.png" alt="POS Corp" style="height: 90px; object-fit: contain;" />
         </div>
-        
-        <div class="swiper-slide">
-          <div class="team-member">
-            <a href="https://www.th.sektor.co/">
-              <div class="member-img">
-                <img src="assets/img/team/team-6.jpg" alt="POS Corp" class="img-large">
-              </div>
-            </a>
-            <div class="member-info">
-              <h4>Sektor</h4>
-              <span>Innovative Technology For Improved Business Outcomes</span>
-              <p>Sektor specialises in delivering innovative and efficient technologies for the retail, networking, security, healthcare, ergonomics, mobility and cybersecurity markets.
 
-Our passionate,</p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="team-member">
-            <a href="https://www.ncrvoyix.com/">
-              <div class="member-img">
-                <img src="assets/img/team/team-3.png" alt="POS Corp">
+        <!-- ✅ คลื่น SVG -->
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none"
+             style="position: absolute; bottom: -35px; left: 0; width: 100%; height: 70px;">
+          <path d="M0.00,49.98 C150.00,150.00 349.47,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #ffffff;"></path>
+        </svg>
+      </div>
+
+      <!-- ✅ ข้อมูลบริษัท -->
+      <div class="member-info" style="padding: 20px;">
+        <h4 style="font-size: 16px; font-weight: bold; color: #0d3c88; margin-bottom: 5px;">
+          POS Corp — Simply Smart
+        </h4>
+        <span style="font-size: 14px; color: #444; margin-bottom: 10px; display: block;">
+          Chief Executive Officer
+        </span>
+        <p style="font-size: 13px; color: #888; font-style: italic;">
+          SMARTER, FRIENDLIER, SIMPLIFIED POINT OF SERVICES SOLUTIONS
+        </p>
+      </div>
+
+    </div>
+  </a>
+</div>
+
+
+
+
+        
+           <div class="swiper-slide">
+                <a href="https://www.th.sektor.co/" target="_blank" style="text-decoration: none;">
+                  <div class="team-member" style="border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.1); text-align: center;">
+                    
+                    <!-- ✅ บังคับขนาด wrapper ของภาพ -->
+                    <div class="member-img-wrapper" style="position: relative; background-color: #f5f5f5; height: 150px;">
+                      <div class="image-container" style="height: 100%; display: flex; align-items: center; justify-content: center;">
+                        <img 
+                          src="assets/img/team/team-6.png" 
+                          alt="Sektor" 
+                          style="height: 90px; object-fit: contain;" />
+                      </div>
+
+                      <!-- ✅ คลื่น SVG ลึกขึ้นให้เท่ากัน -->
+                      <svg viewBox="0 0 500 150" preserveAspectRatio="none"
+     style="position: absolute; bottom: -40px; left: 0; width: 100%; height: 90px;">
+  <path d="M0.00,49.98 C150.00,150.00 349.47,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+        style="stroke: none; fill: #ffffff;"></path>
+</svg>>
+                    </div>
+
+                    <!-- ✅ ข้อมูลบริษัท -->
+                    <div class="member-info" style="padding: 20px;">
+                      <h4 style="font-size: 16px; font-weight: bold; color: #0d3c88; margin-bottom: 5px;">
+                        Sektor
+                      </h4>
+                      <span style="font-size: 14px; color: #444; margin-bottom: 10px; display: block;">
+                        Innovative Technology For Improved Business Outcomes
+                      </span>
+                      <p style="font-size: 13px; color: #888; font-style: italic;">
+                        Sektor specialises in delivering innovative and efficient technologies for the retail, networking, security, healthcare, ergonomics, mobility and cybersecurity markets. Our passionate,
+                      </p>
+                    </div>
+
+                  </div>
+                </a>
               </div>
-            </a>
-            <div class="member-info">
-              <h4>NCR Voyix</h4>
-              <span>Transforming
-                  Commerce</span>
-              <p>We partner with the world's leading restaurants and retailers to transform everyday transactions into exceptional experiences.</p>
-            </div>
-          </div>
+<div class="swiper-slide">
+  <a href="https://www.ncrvoyix.com/" target="_blank" style="text-decoration: none;">
+    <div class="team-member"
+         style="border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.1); text-align: center;">
+      
+      <!-- ✅ กำหนดความสูงคงที่ที่ wrapper -->
+      <div class="member-img-wrapper"
+           style="position: relative; background-color: #f5f5f5; height: 150px;">
+        
+        <!-- ✅ รูปภาพ: ไม่ระบุขนาด -->
+        <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
+          <img 
+            src="assets/img/team/team-3.png" 
+            alt="NCR Voyix"
+            style="max-width: 100%; height: auto; object-fit: contain;" />
         </div>
-        <div class="swiper-slide">
-          <div class="team-member">
-            <a href="https://dukemfg.com/">
-              <div class="member-img">
-                <img src="assets/img/team/team-4.jpg" alt="POS Corp">
-              </div>
-            </a>
-            <div class="member-info">
-              <h4>Duke</h4>
-              <span>THE DUKE NAME HAS HAD A REPUTATION FOR QUALITY FOR 100 YEARS</span>
-                <p>
-                Our integrated solutions are the heart of your foodservice operation
-                You need a business partner that understands the unique challenges of your operation.</p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="team-member">
-            <a href="https://www.lg.com/th/">
-              <div class="member-img">
-                <img src="assets/img/team/team-5.png" alt="POS Corp">
-              </div>
-            </a>
-            <div class="member-info">
-              <h4>LG</h4>
-              <span>For LG Owners</span>
-              <p>We are committed to making your product experience as enjoyable as possible, from purchase all the way through the life of the product. Explore product tips, service plans and more, to help you get the most out of your product.</p>
-            </div>
-          </div>
-        </div>
+
+        <!-- ✅ คลื่น SVG ลึกและคงที่ -->
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none"
+             style="position: absolute; bottom: -35px; left: 0; width: 100%; height: 70px;">
+          <path d="M0.00,49.98 C150.00,150.00 349.47,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #ffffff;"></path>
+        </svg>
+      </div>
+
+      <!-- ✅ เนื้อหา -->
+      <div class="member-info" style="padding: 20px;">
+        <h4 style="font-size: 16px; font-weight: bold; color: #0d3c88; margin-bottom: 5px;">
+          NCR Voyix
+        </h4>
+        <span style="font-size: 14px; color: #444; margin-bottom: 10px; display: block;">
+          Transforming Commerce
+        </span>
+        <p style="font-size: 13px; color: #888; font-style: italic;">
+          We partner with the world's leading restaurants and retailers to transform everyday transactions into exceptional experiences.
+        </p>
+      </div>
+
+    </div>
+  </a>
+</div>
+
+
+
+<div class="swiper-slide">
+  <a href="https://dukemfg.com/" target="_blank" style="text-decoration: none;">
+    <div class="team-member" style="border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.1); text-align: center;">
+      
+     <div class="member-img-wrapper" style="position: relative; background-color: #f5f5f5; height: 180px;">
+  <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+    <img src="assets/img/team/team-4.png" alt="LG"
+         style="max-height: 120px; object-fit: contain;" />
+  </div>
+
+  <svg viewBox="0 0 500 150" preserveAspectRatio="none"
+       style="position: absolute; bottom: -15px; left: 0; width: 100%; height: 70px;">
+    <path d="M0.00,49.98 C150.00,150.00 349.47,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+          style="stroke: none; fill: #ffffff;"></path>
+  </svg>
+</div>
+
+
+      <div class="member-info" style="padding: 20px;">
+        <h4 style="font-size: 16px; font-weight: bold; color: #0d3c88;">Duke</h4>
+        <span style="font-size: 14px; color: #444; display: block; margin-bottom: 10px;">
+          THE DUKE NAME HAS HAD A REPUTATION FOR QUALITY FOR 100 YEARS
+        </span>
+        <p style="font-size: 13px; color: #888; font-style: italic;">
+          Our integrated solutions are the heart of your foodservice operation.
+          You need a business partner that understands the unique challenges of your operation.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
 
         
 <div class="swiper-slide">
-          <div class="team-member">
-            <a href="https://www.partnertechcorp.com/">
-              <div class="member-img">
-                <img src="assets/img/team/team-2.jpg" alt="POS Corp">
-              </div>
-            </a>
-            <div class="member-info">
-              <h4>Partner</h4>
-              <span>Unlock the Power of Self-Checkout</span>
-              <p>Discover Partner Tech's self-checkout solutions that enable your store to boost sales without adding extra staff. AI helps reduce interventions and prevent theft.</p>
-            </div>
-          </div>
+  <a href="https://www.partnertechcorp.com/" target="_blank" style="text-decoration: none;">
+    <div class="team-member" style="border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.1); text-align: center;">
+      
+      <!-- ✅ รูปภาพพร้อมคลื่นขนาดเท่ากัน -->
+      <div class="member-img-wrapper" style="position: relative; background-color: #f5f5f5; height: 150px;">
+        <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
+          <img src="assets/img/team/team-2.jpg" alt="Partner"
+               style="max-width: 100%; height: auto; object-fit: contain;" />
         </div>
-        <div class="swiper-slide">
-          <div class="team-member">
-            <a href="Bangkok Payment Solutions Company Limited">
-              <div class="member-img">
-                <img src="assets/img/team/team-7.png" alt="POS Corp">
-              </div>
-            </a>
-            <div class="member-info">
-              <h4>Bangkok Payment Solutions Company Limited</h4>
-              <span>BPS promotes creativity and innovative thinking</span>
-              <p>BPS or Bangkok Payment Solutions is an Innovator. dedicated to designing, developing, and delivering complex financial technology solutions for Thailand’s integrated mass transit network and bustling retail environments.</p>
-            </div>
-          </div>
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none"
+             style="position: absolute; bottom: -47px; left: 0; width: 100%; height: 90px;">
+          <path d="M0.00,49.98 C150.00,150.00 349.47,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #ffffff;"></path>
+        </svg>
+      </div>
+
+      <!-- ✅ เนื้อหาการ์ด -->
+      <div class="member-info" style="padding: 20px;">
+        <h4 style="font-size: 16px; font-weight: bold; color: #0d3c88;">Partner</h4>
+        <span style="font-size: 14px; color: #444; display: block; margin-bottom: 10px;">
+          Unlock the Power of Self-Checkout
+        </span>
+        <p style="font-size: 13px; color: #888; font-style: italic;">
+          Discover Partner Tech's self-checkout solutions that enable your store to boost sales without adding extra staff. AI helps reduce interventions and prevent theft.
+        </p>
+      </div>
+
+    </div>
+  </a>
+</div>
+
+       <div class="swiper-slide">
+  <a href="https://www.bkkps.co.th/" target="_blank" style="text-decoration: none;">
+    <div class="team-member" style="border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.1); text-align: center;">
+      
+      <!-- ✅ รูปภาพ + คลื่น (ลึกเท่ากันทุกใบ) -->
+      <div class="member-img-wrapper" style="position: relative; background-color: #f5f5f5; height: 150px;">
+        <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
+          <img src="assets/img/team/team-7.png" alt="BPS"
+               style="max-width: 100%; height: auto; object-fit: contain;" />
         </div>
-        <div class="swiper-slide">
-          <div class="team-member">
-            <a href="https://www.ricoh.com/">
-              <div class="member-img">
-                <img src="assets/img/team/team-8.jpg" alt="POS Corp">
-              </div>
-            </a>
-            <div class="member-info">
-              <h4>RICOH
-imagine. change.</h4>
-              <span>Fulfillment can be defined as a feeling gained from achievement and self-development.</span>
-              <p>RICOH enables individuals to work smarter, and by providing fulfillment through work, we will enhance the quality of life.</p>
-            </div>
-          </div>
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none"
+             style="position: absolute; bottom: -46px; left: 0; width: 100%; height: 90px;">
+          <path d="M0.00,49.98 C150.00,150.00 349.47,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #ffffff;"></path>
+        </svg>
+      </div>
+
+      <!-- ✅ เนื้อหา -->
+      <div class="member-info" style="padding: 20px;">
+        <h4 style="font-size: 16px; font-weight: bold; color: #0d3c88;">
+          Bangkok Payment Solutions Company Limited
+        </h4>
+        <span style="font-size: 14px; color: #444; display: block; margin-bottom: 10px;">
+          BPS promotes creativity and innovative thinking
+        </span>
+        <p style="font-size: 13px; color: #888; font-style: italic;">
+          BPS or Bangkok Payment Solutions is an Innovator. Dedicated to designing, developing, and delivering complex financial technology solutions for Thailand’s integrated mass transit network and bustling retail environments.
+        </p>
+      </div>
+
+    </div>
+  </a>
+</div>
+<div class="swiper-slide">
+  <a href="https://www.ricoh.com/" target="_blank" style="text-decoration: none;">
+    <div class="team-member"
+         style="border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.1); text-align: center;">
+      
+      <!-- ✅ รูป + คลื่นลึกเท่ากัน -->
+      <div class="member-img-wrapper"
+           style="position: relative; background-color: #f5f5f5; height: 150px;">
+        <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
+          <img src="assets/img/team/team-8.png" alt="RICOH"
+               style="max-width: 100%; height: auto; object-fit: contain;" />
         </div>
-        <div class="swiper-slide">
-          <div class="team-member">
-            <a href="https://www.elotouch.com/">
-              <div class="member-img">
-                <img src="assets/img/team/team-9.jpg" alt="POS Corp">
-              </div>
-            </a>
-            <div class="member-info">
-              <h4>Elotouch</h4>
-              <span>Quick ship Intel products.</span>
-              <p>Elo’s Quick Ship program expedites customer deliveries of
-select Intel-based touchscreen computers. </p>
-            </div>
-          </div>
-        </div>
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none"
+             style="position: absolute; bottom: -40px; left: 0; width: 100%; height: 90px;">
+          <path d="M0.00,49.98 C150.00,150.00 349.47,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #ffffff;"></path>
+        </svg>
+      </div>
+
+      <!-- ✅ เนื้อหา -->
+      <div class="member-info" style="padding: 20px;">
+        <h4 style="font-size: 16px; font-weight: bold; color: #0d3c88;">
+          RICOH<br><small style="font-weight: normal; color: #666;">imagine. change.</small>
+        </h4>
+        <span style="font-size: 14px; color: #444; display: block; margin-bottom: 10px;">
+          Fulfillment can be defined as a feeling gained from achievement and self-development.
+        </span>
+        <p style="font-size: 13px; color: #888; font-style: italic;">
+          RICOH enables individuals to work smarter, and by providing fulfillment through work, we will enhance the quality of life.
+        </p>
+      </div>
+
+    </div>
+  </a>
+</div>
 
         <div class="swiper-slide">
-          <div class="team-member">
-            <a href="https://starmicronics.co.th/th/home/">
-              <div class="member-img">
-                <img src="assets/img/team/team-10.png" alt="POS Corp">
-              </div>
-            </a>
-            <div class="member-info">
-              <h4>Starmicronics</h4>
-              <span>Star Worldwide</span>
-              <p>Star Micronics, founded in Japan in 1950, is a global leader in POS printing, trusted by major retailers and hospitality brands worldwide.</p>
-            </div>
-          </div>
+  <a href="https://www.elotouch.com/" target="_blank" style="text-decoration: none;">
+    <div class="team-member"
+         style="border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.1); text-align: center;">
+
+      <div class="member-img-wrapper"
+           style="position: relative; background-color: #f5f5f5; height: 150px;">
+        <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
+          <img src="assets/img/team/team-9.png" alt="Elotouch"
+               style="max-width: 100%; height: auto; object-fit: contain;" />
         </div>
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none"
+             style="position: absolute; bottom: -50px; left: 0; width: 100%; height: 90px;">
+          <path d="M0.00,49.98 C150.00,150.00 349.47,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #ffffff;"></path>
+        </svg>
+      </div>
+
+      <div class="member-info" style="padding: 20px;">
+        <h4 style="font-size: 16px; font-weight: bold; color: #0d3c88;">Elotouch</h4>
+        <span style="font-size: 14px; color: #444; display: block; margin-bottom: 10px;">
+          Quick ship Intel products.
+        </span>
+        <p style="font-size: 13px; color: #888; font-style: italic;">
+          Elo’s Quick Ship program expedites customer deliveries of select Intel-based touchscreen computers.
+        </p>
+      </div>
+
+    </div>
+  </a>
+</div>
+
+
+        <div class="swiper-slide">
+  <a href="https://starmicronics.co.th/th/home/" target="_blank" style="text-decoration: none;">
+    <div class="team-member"
+         style="border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.1); text-align: center;">
+
+      <div class="member-img-wrapper"
+           style="position: relative; background-color: #f5f5f5; height: 150px;">
+        <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
+          <img src="assets/img/team/team-10.png" alt="Starmicronics"
+               style="max-width: 100%; height: auto; object-fit: contain;" />
+        </div>
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none"
+             style="position: absolute; bottom: -50px; left: 0; width: 100%; height: 90px;">
+          <path d="M0.00,49.98 C150.00,150.00 349.47,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #ffffff;"></path>
+        </svg>
+      </div>
+
+      <div class="member-info" style="padding: 20px;">
+        <h4 style="font-size: 16px; font-weight: bold; color: #0d3c88;">Starmicronics</h4>
+        <span style="font-size: 14px; color: #444; display: block; margin-bottom: 10px;">
+          Star Worldwide
+        </span>
+        <p style="font-size: 13px; color: #888; font-style: italic;">
+          Star Micronics, founded in Japan in 1950, is a global leader in POS printing, trusted by major retailers and hospitality brands worldwide.
+        </p>
+      </div>
+
+    </div>
+  </a>
+</div>
+
 
 
 
@@ -1021,11 +1191,11 @@ select Intel-based touchscreen computers. </p>
       </script>
           <div class="swiper-wrapper align-items-center">
               <div class="swiper-slide">
-                <a href="assets/img/clients/client-26.png" data-fancybox="clients">
+                <a href="assets/img/clients/client-26.png" data-fancybox="clients" data-thumbs="false">
                   <img src="assets/img/clients/client-1.png" alt="Burger King" class="img-fluid">
                 </a>
               </div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-26.png" class="img-fluid" alt=""></div>
+          
             <div class="swiper-slide">
               <a href="assets/img/clients/client-26.png" data-fancybox="clients">
                 <img src="assets/img/clients/client-2.png" class="img-fluid" alt="Client 2">
@@ -1157,15 +1327,19 @@ select Intel-based touchscreen computers. </p>
               <img src="assets/img/clients/client-30.png" class="img-fluid" alt="Client 30">
             </a>
           </div>
-          <div class="swiper-pagination"></div>
+          
         </div>
-
+  <div class="swiper-pagination" style="bottom: 10px;"></div>
       </div>
+
 
     </section><!-- /Clients Section -->
 
+
     </div>
+   
 </a>
+
     <!-- Recent Posts Section -->
     <section id="recent-posts" class="recent-posts section">
 
@@ -1328,11 +1502,11 @@ document.getElementById('contact-form').addEventListener('submit', async functio
                   <p><strong>HOT LINE:</strong><br>
                   (66)0-83707-2270<br>
                   
-          <p><strong>Email:</strong><br>
+                 <p><strong>Email:</strong><br>
                   <p class="mb-0">
-  <a href="mailto:phornsak@dtotalsolution.com" style="text-decoration: none; color: inherit;">
-    K.phornsak
-  </a>
+                <a href="mailto:phornsak@dtotalsolution.com" style="text-decoration: none; color: inherit;">
+                 K.phornsak
+                  </a>
                 </div>
                 <div class="col-md-4 mb-3">
                   <p><strong>Address:</strong><br>
@@ -1352,7 +1526,6 @@ document.getElementById('contact-form').addEventListener('submit', async functio
         <div class="small text-center text-muted mt-3">
           © Copyright - D Total Solution Co., Ltd. All Rights Reserved
           <br><strong>"Your Satisfaction is our Quality"</strong><br>
-
         </div>
       </div>
 
@@ -1375,7 +1548,12 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <!-- Vendor JS Files -->
-   
+   <script>
+  AOS.init({
+    once: true,
+    duration: 800,
+    offset: 200 // ✅ offset ช่วยให้ animation เริ่มเร็วขึ้น
+  });</script>
 <!-- ✅ Bootstrap Bundle (จำเป็นสำหรับ carousel) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
  
@@ -1465,5 +1643,37 @@ document.getElementById('contact-form').addEventListener('submit', async functio
 }
 
 
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #999;
+  opacity: 0.5;
+  margin: 0 4px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: opacity 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background: #007bff; /* สีที่ active */
+  opacity: 1;
+}
+
+.fancybox__thumbs {
+  display: none !important;
+}
+footer {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
 
 </style>

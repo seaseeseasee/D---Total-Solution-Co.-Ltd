@@ -1668,6 +1668,9 @@ section,
   text-align: center;
   border-radius: 5px;
   transition: 0.3s;
+   /* ✅ เพิ่มขอบบนและล่าง */
+  border-top: 1px solid var(--primary-color, #dfdfdf);   /* ใช้ตัวแปร CSS หรือกำหนดค่าสีตรงๆ */
+  border-bottom: 1px solid var(--primary-color, #c7c5c5);
 }
 
 .team .team-member .member-img img {
@@ -1751,6 +1754,18 @@ section,
 .team .team-member:hover .social {
   right: 8px;
   opacity: 1;
+}
+
+.member-img img {
+  height: 100px;
+  object-fit: contain;
+}
+.member-info p {
+  min-height: 60px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /*--------------------------------------------------------------
@@ -1927,7 +1942,7 @@ section,
   color: var(--contrast-color);
   border: 0;
   padding: 10px 30px;
-  transition: 0.4s;
+  transition: 0.1s;
   border-radius: 4px;
 }
 

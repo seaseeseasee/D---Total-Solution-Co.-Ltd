@@ -22,6 +22,35 @@
   document.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const contactSection = document.querySelector("#contact");
+    const body = document.body;
+
+    if (!contactSection) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            body.classList.add("scrolled");
+          } 
+         else {
+            body.classList.remove("scrolled");
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px 0px 400px 0px", // ✅ เห็นเพียงนิดเดียวก็ trigger
+        threshold: 0.1
+      }
+    );
+
+      
+    
+
+    observer.observe(contactSection);
+  });
   /**
    * Mobile nav toggle
    */
