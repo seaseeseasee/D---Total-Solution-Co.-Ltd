@@ -1598,7 +1598,7 @@ section,
 
 /* จุดสไลด์ (pagination) */
 .testimonials .swiper-pagination {
-  margin-top: 20px;
+  margin-top: 50px;
   position: relative;
 }
 
