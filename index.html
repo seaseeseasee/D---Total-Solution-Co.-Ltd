@@ -800,50 +800,49 @@
   </div>
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="swiper team-swiper">
+    <div class="swiper team-swiper" style="overflow: visible;">
       
-      <div class="swiper-wrapper">
+      <div class="swiper-wrapper" >
 
         <!-- ✅ 1. POS Corp -->
-                   <div class="swiper-slide">
-  <a href="https://www.poscorp.sg/" target="_blank" style="text-decoration: none;">
-    <div class="team-member" style="border-radius: 5px; overflow: hidden; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.1); text-align: center; ">
+        <div class="swiper-slide">
+        <a href="https://www.poscorp.sg/" target="_blank" style="text-decoration: none;">
+        <div class="team-member" style="border-radius: 5px; overflow: hidden; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.1); text-align: center; ">
       
-      <!-- ✅ ครอบภาพด้วย container ขนาดเท่ากัน -->
-          <div class="member-img-wrapper" style="position: relative; background-color: #f5f5f5; height: 250px;">
-        <div class="image-container" style="height: 100%; display: flex; align-items: center; justify-content: center; padding-top: 20px;">
-          <img src="assets/img/team/team-1.png" alt="POS Corp" style="height: 90px; object-fit: contain;" />
-        </div>
+                <!-- ✅ ครอบภาพด้วย container ขนาดเท่ากัน -->
+                    <div class="member-img-wrapper" style="position: relative; background-color: #f5f5f5; height: 250px;">
+                  <div class="image-container" style="height: 100%; display: flex; align-items: center; justify-content: center; padding-top: 20px;">
+                    <img src="assets/img/team/team-1.png" alt="POS Corp" style="height: 90px; object-fit: contain;" />
+                  </div>
 
-        <svg viewBox="0 0 500 150" preserveAspectRatio="none"
-            style="position: absolute; bottom: -20px; left: 0; width: 100%; height: 100px;">
-          <path d="M0.00,49.98 C150.00,150.00 349.47,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                style="stroke: none; fill: #ffffff;"></path>
-        </svg>
-      </div>
+                  <svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                      style="position: absolute; bottom: -20px; left: 0; width: 100%; height: 100px;">
+                    <path d="M0.00,49.98 C150.00,150.00 349.47,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                          style="stroke: none; fill: #ffffff;"></path>
+                  </svg>
+                </div>
 
+          
+                <!-- ✅ ข้อมูลบริษัท -->
+                <div class="member-info" style="padding: 20px;">
+                  <h4 style="font-size: 16px; font-weight: bold; color: #0d3c88; margin-bottom: 5px;">
+                    POS Corp — Simply Smart
+                  </h4>
+                  <span style="font-size: 14px; color: #444; margin-bottom: 10px; display: block;">
+                    Chief Executive Officer
+                  </span>
+                  <p style="font-size: 13px; color: #888; font-style: italic;">
+                    SMARTER, FRIENDLIER, SIMPLIFIED POINT OF SERVICES SOLUTIONS
+                  </p>
+                </div>
 
-      <!-- ✅ ข้อมูลบริษัท -->
-      <div class="member-info" style="padding: 20px;">
-        <h4 style="font-size: 16px; font-weight: bold; color: #0d3c88; margin-bottom: 5px;">
-          POS Corp — Simply Smart
-        </h4>
-        <span style="font-size: 14px; color: #444; margin-bottom: 10px; display: block;">
-          Chief Executive Officer
-        </span>
-        <p style="font-size: 13px; color: #888; font-style: italic;">
-          SMARTER, FRIENDLIER, SIMPLIFIED POINT OF SERVICES SOLUTIONS
-        </p>
-      </div>
-
-    </div>
-  </a>
-</div>
-
-
+              </div>
+            </a>
+          </div>
 
 
-        
+
+
            <div class="swiper-slide">
                 <a href="https://www.th.sektor.co/" target="_blank" style="text-decoration: none;">
                   <div class="team-member" style="border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.1); text-align: center;">
@@ -1616,7 +1615,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
 /* ✅ STEP 1: ให้ Swiper Container มีความสูงอัตโนมัติ (หรือสูงสุดของลูก) */
 .team-swiper .swiper-wrapper {
   display: flex;
-  align-items: stretch;
+  align-items: stretch; 
 }
 
 /* ✅ STEP 2: บังคับให้ .swiper-slide และ .team-member สูงเท่ากัน */
@@ -1679,5 +1678,8 @@ footer {
   outline: none !important;
   width: 5%; /* ปรับให้แคบลง */
 }
+
+
+
 
 </style>
